@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Flyout.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0"
+                             Spacing="25">
+
+            <!-- Description -->
+            <Label Text="Main Page" FontSize = "50"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center" />
+
+            <Label Text="Explore the latest updates, announcements, and essential information about our school on the main page. Stay connected with upcoming events, important notices, and quick access to various features. Your gateway to a seamless school experience." 
+                   FontSize="Title"
+                   LineBreakMode="WordWrap"
+                   VerticalOptions="StartAndExpand"
+                   HorizontalOptions="FillAndExpand"
+                   MaximumWidthRequest="620"/>
+            <Label Text="You will find all the Classes in a Flyout menu accesable from the Top Left Corner."
+                   HorizontalOptions="FillAndExpand"
+                   MaximumWidthRequest="550"/>
+
+            <!-- Schedule -->
+            <Label Text="Class Schedule" FontSize="Title" HorizontalOptions="Center" />
+
+            <Grid HorizontalOptions="CenterAndExpand" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Mon -->
+                <Frame Grid.Column="0" BackgroundColor="#45818E" CornerRadius="10" HasShadow="True">
+                    <StackLayout Spacing="10">
+                        <Label Text="Monday" FontSize="Subtitle" HorizontalOptions="Start" />
+                        <!-- Eng -->
+                        <Frame BackgroundColor="#cc0000" CornerRadius="10" HasShadow="True">
+                            <Label Text="8:30 AM - 11:45 AM  
+                                         English" HorizontalOptions="Start"/>
+                        </Frame>
+                        <!-- MS -->
+                        <Frame BackgroundColor="#93c47d" CornerRadius="10" HasShadow="True">
+                            <Label Text="12:40 PM - 2:15 PM  
+                                         Modeling and Simulation" HorizontalOptions="Start" />
+                        </Frame>
+                        <!-- GUI -->
+                        <Frame BackgroundColor="#0000FF" CornerRadius="10" HasShadow="True">
+                            <Label Text="2:20 PM - 5:35 PM  
+                                         GUI" HorizontalOptions="Start" />
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Tue -->
+                <Frame Grid.Column="1" BackgroundColor="#a64d79" CornerRadius="10" HasShadow="True">
+                    <StackLayout Spacing="10">
+                        <Label Text="Tuesday" FontSize="Subtitle" HorizontalOptions="Start" />
+                        <!-- ItD -->
+                        <Frame BackgroundColor="#351c75" CornerRadius="10" HasShadow="True">
+                            <Label Text="12:40 PM - 3:55 PM  
+                                         Introduction to Databases" HorizontalOptions="Start" />
+                        </Frame>
+                        <!-- MS -->
+                        <Frame BackgroundColor="#93c47d" CornerRadius="10" HasShadow="True">
+                            <Label Text="4:00 PM - 7:15 PM  
+                                         Modeling and Simulation" HorizontalOptions="Start" />
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Sat -->
+                <Frame Grid.Column="2" BackgroundColor="#7f6000" CornerRadius="10" HasShadow="True">
+                    <StackLayout Spacing="10">
+                        <Label Text="Saturday" FontSize="Subtitle" HorizontalOptions="Start" />
+                        <!-- GUI -->
+                        <Frame BackgroundColor="#0000FF" CornerRadius="10" HasShadow="True">
+                            <Label Text="8:30 AM - 11:45 AM  
+                                         GUI" HorizontalOptions="Start" />
+                        </Frame>
+                        <!-- MS -->
+                        <Frame BackgroundColor="#93c47d" CornerRadius="10" HasShadow="True">
+                            <Label Text="12:40 PM - 3:55 PM  
+                                         Modeling and Simulation" HorizontalOptions="Start" />
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+            <!-- End of Schedule -->
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

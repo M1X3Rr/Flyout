@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Flyout.ModelingSimulation"
+             Title="ModelingSimulation">
+    
+    <ListView x:Name="subjectListView"
+              ItemsSource="{Binding Subjects}"
+              HasUnevenRows="True"
+              SeparatorVisibility="None">
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Padding="10">
+                        <Label Text="{Binding Name}" FontSize="50" HorizontalOptions="Center" FontAttributes="Bold" />
+                        <Label Text="{Binding TeacherName}" FontSize="25" HorizontalOptions="Center" />
+                        <Label Text="{Binding Room}" FontSize="25" HorizontalOptions="Center" />
+                        <Label Text="{Binding Description}" FontSize="25" HorizontalOptions="Center" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
+    
+</ContentPage>

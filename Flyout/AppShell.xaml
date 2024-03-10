@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Flyout.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Flyout"
+    Shell.FlyoutBehavior="Flyout"
+    Title="Flyout"
+    Shell.TabBarIsVisible="False">
+
+    <Shell.FlyoutHeader>
+        <Image Source="calendar_icon.png" WidthRequest="100"/>
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutBackgroundColor>
+        <Color>#45818E</Color>
+    </Shell.FlyoutBackgroundColor>
+
+    <FlyoutItem Title="Subjects" Icon="book.png" FlyoutDisplayOptions="AsMultipleItems">
+        <!-- Home Section -->
+        <ShellSection Title="Home" Icon="home.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
+        </ShellSection>
+
+        <!-- Subjects Section -->
+        <ShellContent Title="English" Icon="english.png"
+                          ContentTemplate="{DataTemplate local:English}" 
+                          Route="English" />
+        <ShellContent Title="Modeling and Simulation" Icon="ms.png"
+                          ContentTemplate="{DataTemplate local:ModelingSimulation}" 
+                          Route="ModelingSimulation" />
+        <ShellContent Title="Introduction to Databases" Icon="db.png"
+                          ContentTemplate="{DataTemplate local:Databases}" 
+                          Route="Databases" />
+        <ShellContent Title="GUI" Icon="gui.png"
+                          ContentTemplate="{DataTemplate local:GUI}" 
+                          Route="GUI" />
+    </FlyoutItem>
+</Shell>
