@@ -4,25 +4,35 @@
              x:Class="Flyout.GUI"
              Title="GUI">
 
-    <ListView x:Name="subjectListView"
+    <StackLayout>
+        <!-- ListView Section -->
+        <StackLayout>
+            <ListView x:Name="subjectListView"
               ItemsSource="{Binding Subjects}"
               HasUnevenRows="True"
               SeparatorVisibility="None">
 
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout Padding="10" Margin="50, 0, 0, 0">
-                        <Label Text="{Binding Name}" FontSize="50" HorizontalOptions="Center" FontAttributes="Bold" />
-                        <Label Text="{Binding TeacherName}" FontSize="25" HorizontalOptions="Center" />
-                        <Label Text="{Binding Room}" FontSize="25" HorizontalOptions="Center" />
-                        <Label Text="{Binding Description}" FontSize="25" HorizontalOptions="Center" />
-                    </StackLayout>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" Margin="50, 0, 0, 0">
+                                <Label Text="{Binding Name}" FontSize="50" HorizontalOptions="Center" FontAttributes="Bold" />
+                                <Label Text="{Binding TeacherName}" FontSize="25" HorizontalOptions="Center" />
+                                <Label Text="{Binding Room}" FontSize="25" HorizontalOptions="Center" />
+                                <Label Text="{Binding Description}" FontSize="25" HorizontalOptions="Center" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
 
-    </ListView>
-
+        <!-- Frame with Image Section -->
+        <Frame BorderColor="Black" HasShadow="True"
+       MaximumWidthRequest="800"
+       VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+            <Image Source="gui_img.jpg" Aspect="AspectFit"/>
+        </Frame>
+    </StackLayout>
 
 </ContentPage>
